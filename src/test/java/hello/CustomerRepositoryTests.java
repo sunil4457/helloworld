@@ -67,7 +67,7 @@ public class CustomerRepositoryTests {
     public void findsByExample() {
 
         Customer probe = new Customer(null, "Matthews");
-
+System.out.println("maijn kya");
         List<Customer> result = repository.findAll(Example.of(probe));
 
         assertThat(result).hasSize(2).extracting("firstName").contains("Dave", "Oliver August");
